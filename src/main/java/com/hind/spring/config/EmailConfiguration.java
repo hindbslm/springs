@@ -10,28 +10,27 @@ import java.util.Properties;
 
 @Configuration
 public class EmailConfiguration {
+
     @Value("${spring.mail.username}")
     private String emailUsername;
 
-    @Value("{spring.mail.password}")
-    private String password;
+    @Value("${spring.mail.password}")
+    private String emailPassword;
 
     @Bean
-    public JavaMailSender getJavaMailSender() {
+    public JavaMailSender javaMailSender() {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
         mailSender.setHost("smtp-relay.sendinblue.com");
         mailSender.setPort(587);
-
-        mailSender.setUsername(emailUsername); // Your Brevo SMTP username (usually your email)
-        mailSender.setPassword(password);      // Your Brevo SMTP password (API key)
+        mailSender.setUsername(emailUsername);
+        mailSender.setPassword(emailPassword);
 
         Properties props = mailSender.getJavaMailProperties();
         props.put("mail.transport.protocol", "smtp");
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.debug", "true"); // Enable for debug logs
+        props.put("mail.debug", "true");
 
         return mailSender;
     }
-
 }

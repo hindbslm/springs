@@ -78,11 +78,10 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- Sendinblue (Brevo) API -->
+		<!-- Mailing -->
 		<dependency>
-			<groupId>com.sendinblue</groupId>
-			<artifactId>sib-api-v3-sdk</artifactId>
-			<version>${sendinblue.version}</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
 
 		<!-- Testing -->
@@ -95,6 +94,11 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<!-- Flyway -->
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
 		</dependency>
 	</dependencies>
 

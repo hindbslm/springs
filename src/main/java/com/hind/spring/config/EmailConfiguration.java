@@ -20,7 +20,7 @@ public class EmailConfiguration {
     @Bean
     public JavaMailSender javaMailSender() {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
-        mailSender.setHost("smtp-relay.sendinblue.com");
+        mailSender.setHost("sandbox.smtp.mailtrap.io");
         mailSender.setPort(587);
         mailSender.setUsername(emailUsername);
         mailSender.setPassword(emailPassword);

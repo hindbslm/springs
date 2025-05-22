@@ -1,6 +1,6 @@
-package com.hind.spring.config;
+package com.hind.spring.authentication.config;
 
-import com.hind.spring.service.JwtService;
+import com.hind.spring.authentication.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

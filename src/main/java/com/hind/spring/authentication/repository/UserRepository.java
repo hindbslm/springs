@@ -1,9 +1,9 @@
-package com.hind.spring.repository;
+package com.hind.spring.authentication.repository;
 
 import java.util.Optional;
 
 
-import com.hind.spring.model.User;
+import com.hind.spring.authentication.model.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

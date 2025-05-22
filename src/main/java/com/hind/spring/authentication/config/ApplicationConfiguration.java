@@ -1,6 +1,6 @@
-package com.hind.spring.config;
+package com.hind.spring.authentication.config;
 
-import com.hind.spring.repository.UserRepository;
+import com.hind.spring.authentication.repository.UserRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

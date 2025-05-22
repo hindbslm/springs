@@ -1,4 +1,4 @@
-package com.hind.spring.config;
+package com.hind.spring.authentication.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

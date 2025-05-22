@@ -1,4 +1,4 @@
-package com.hind.spring.dto;
+package com.hind.spring.authentication.dto;
 
 import lombok.Getter;
 import lombok.Setter;

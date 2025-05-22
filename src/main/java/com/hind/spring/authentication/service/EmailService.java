@@ -1,4 +1,4 @@
-package com.hind.spring.service;
+package com.hind.spring.authentication.service;
 
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;

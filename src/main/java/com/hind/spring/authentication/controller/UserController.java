@@ -1,8 +1,9 @@
-package com.hind.spring.controller;
+package com.hind.spring.authentication.controller;
 
 
-import com.hind.spring.model.User;
-import com.hind.spring.service.UserService;
+import com.hind.spring.authentication.model.User;
+import com.hind.spring.authentication.security.UserDetailsImpl;
+import com.hind.spring.authentication.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RequestMapping("/users")
+@RequestMapping("/api/users")
 @RestController
 public class UserController {
     private final UserService userService;
@@ -20,12 +21,15 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/me")
+   /* @GetMapping("/me")
     public ResponseEntity<User> authenticatedUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        User currentUser = (User) authentication.getPrincipal();
-        return ResponseEntity.ok(currentUser);
-    }
+        if (authentication != null && authentication.getPrincipal() instanceof User) {
+            User user = (User) authentication.getPrincipal();
+            return ResponseEntity.ok(user);
+        }
+        throw new RuntimeException("User not authenticated");
+    }*/
 
     @GetMapping("/")
     public ResponseEntity<List<User>> allUsers() {

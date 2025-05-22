@@ -1,7 +1,7 @@
-package com.hind.spring.service;
+package com.hind.spring.authentication.service;
 
-import com.hind.spring.model.User;
-import com.hind.spring.repository.UserRepository;
+import com.hind.spring.authentication.model.User;
+import com.hind.spring.authentication.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

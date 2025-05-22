@@ -1,4 +1,4 @@
-package com.hind.spring.service;
+package com.hind.spring.authentication.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
